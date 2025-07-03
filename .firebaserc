@@ -1,7 +1,7 @@
 {
   "projects": {
-    "default": "tarkov-tracker-dev",
-    "dev": "tarkov-tracker-dev",
+    "default": "demo-tarkov-tracker-dev",
+    "dev": "demo-tarkov-tracker-dev",
     "prod": "tarkovtracker-org"
   },
   "targets": {},

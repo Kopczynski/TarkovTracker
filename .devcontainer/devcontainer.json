@@ -1,0 +1,33 @@
+{
+  "workspaceFolder": "/TarkovTracker",
+  "name": "TarkovTracker DevContainer",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "dev",
+  "features": {
+  "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {
+    "version": "latest"
+  },
+  "ghcr.io/devcontainers/features/github-cli:1": {
+    "installDirectlyFromGitHubRelease": true,
+    "version": "latest"
+  },
+  "ghcr.io/devcontainers/features/node:1": {
+    "version": "20", // Defaults to 'lts' 
+    "nvmVersion": "latest", // Default value
+    "installYarnUsingApt": false
+  }
+},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "octref.vetur",
+        "Firebase.vscode-firestore"
+      ]
+    }
+  },
+  "postCreateCommand": "bash -c 'npm install'",
+  "postStartCommand": "bash -c 'npm run container'"
+}
+
