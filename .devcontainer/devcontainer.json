@@ -28,6 +28,6 @@
     }
   },
   "postCreateCommand": "bash -c 'npm install'",
-  "postStartCommand": "bash -c 'npm run container'"
+  "postStartCommand": "bash -c 'npm run container &'"
 }
 
