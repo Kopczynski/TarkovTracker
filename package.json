@@ -19,7 +19,7 @@
     "emulators:start": "firebase emulators:start --only auth,functions,firestore,database,hosting",
     "emulators:local": "npm run build:functions && firebase emulators:start --import=./local_data --export-on-exit --only auth,functions,firestore,database,hosting,pubsub",
     "dev": "concurrently \"cd frontend && npm run dev\" \"npm:emulators:local\"",
-    "container": "concurrently \"cd frontend && npm run dev -- --host\" \"firebase emulators:start --project demo-tarkov-tracker-dev --import=./local_data --export-on-exit --only auth,functions,firestore,database,hosting,pubsub\"",
+    "container": "concurrently \"cd frontend && npm run dev -- --host\" \"firebase emulators:start --project demo-tarkov-tracker-dev --import=./local_data --export-on-exit --only auth,functions,firestore,database,hosting,pubsub --verbosity=QUIET\"",
     "deps": "npx taze --r --I",
     "swagger": "npm run swagger --workspace=functions",
     "generate-swagger": "npm run build:functions && (cd functions && node lib/openapi/swagger.js)",
